@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "GameFramework//SpringArmComponent.h"
 #include "ShooterCharacter.generated.h"
 
 UCLASS()
@@ -25,4 +26,14 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+protected:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
+	UStaticMeshComponent* StaticMesh;
+
+// public:
+// 	FORCEINLINE USpringArmComponent* GetSpringArm() const
+// 	{
+// 		return SpringArmComponent2;
+// 	}
 };
